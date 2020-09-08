@@ -2,8 +2,22 @@
 <html>
 
 <head>
+
+
  
 <title>Terry's Playground</title>
+<script src="js/js.js"></script>
+<script>
+
+function message(msg){
+    document.getElementById('output').innerHTML=msg
+}
+
+function displayDate(){
+    document.getElementById("demo").innerHTML=Date()
+}
+
+</script>
 
 </head>
 <body>
@@ -11,5 +25,9 @@
 <p>I'm hosted with GitHub Pages.</p>
 
 <p>This new commit should appear</p>
+<div onclick="message('Hi')">Clicking this will invoke js function</div>
+<p id=output></p>
+<p id=demo>This should change to a date</p>
+<button type="button" onclick=displayDate()>Display Date</button>
 </body>
 </html>
