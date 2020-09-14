@@ -8,9 +8,12 @@ body {
   max-width: 100%;
   max-height: 100%;
 }
+.content {
+        max-width:500px;
+        margin: auto;
+    }
 
-    </style>
-    
+</style>
 
 
 <title>Terry's Playground</title>
@@ -24,16 +27,18 @@ function unhide(){
      y.style.display="block"
  }
 
+ function snake(){
+     var snakeStr=document.getElementById("text1").value
+     if (snakeStr==="Azfar"||snakeStr==="Az"||snakeStr==="azfar"||snakeStr==="az"){
+     unhide()}
+     else {
+        document.getElementById("snakeGuess").innerHTML="Wrong guess, try again."
+     }
+
+ }
+
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<style>
-    .content {
-        max-width:500px;
-        margin: auto;
-    }
-</style>
 
 
 </head>
@@ -65,16 +70,24 @@ function unhide(){
 <br>
 <br>
 -->
+<input id="text1" placeholder="Who is the snake?"></input>
+<br>
+<br>
+<button onclick=snake() id="inputButton">Guess the snake</button>
+<button onclick=hide() id="reset">Reset</button>
 
-<p id="stext" hidden>sssSSSssSSss </p>
+<p id="snakeGuess"></p>
+<p id="stext" hidden>You've guessed right! sssSSSssSSss </p>
 
 <img id=img1 hidden src=https://media-exp1.licdn.com/dms/image/C5603AQF86eC1VsdP0Q/profile-displayphoto-shrink_800_800/0?e=1605744000&v=beta&t=DFW4wrpcsaLPGCkEQ2XWSm5KK3BoWgpgZOBuJtot7Ro>
 <br>
+<!--
+
 <button type="button" onclick=unhide()>Show me the snake!</button>
 
 <button type="button" onclick=hide()>Hide image</button>
 </div>
-
+-->
 
 
 </body>

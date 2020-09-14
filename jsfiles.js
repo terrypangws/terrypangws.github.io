@@ -21,6 +21,9 @@ function buttonClick2(){
 }
  function hide(){
      let x=document.getElementById("img1")
+     let y=document.getElementById('stext')
+     y.style.display="none"
+
      x.style.display="none"
  }
 
