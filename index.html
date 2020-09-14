@@ -15,44 +15,18 @@
     }
 </style>
 
-<script>
-
-function message(msg){
-    document.getElementById('output').innerHTML=msg
-}
-
-function buttonClick(){
-    var answer=200
-    document.getElementById('stuff').innerHTML=answer
-}
-
-function buttonClick2(){
-    var answer=300
-    document.getElementById('stuff').innerHTML=answer
-}
- function hide(){
-     let x=document.getElementById("img1")
-     x.style.display="none"
- }
-
- function unhide(){
-     let x=document.getElementById("img1")
-     x.style.display="block"
- }
-
-</script>
-
 
 </head>
 <body>
 
 
 <div class="content">
-<h1>Hello World</h1>
+<h1>Snake World</h1>
 
-<p>This is a test to see how much the page will expand by. Ok it seems that i need more text to push to the edge</p>
 
-<p>This new commit should appear</p>
+<p>This is a page to show you who the latest snakes are.</p>
+
+<!----
 <div onclick="message('Hi')">Clicking this will invoke js function</div>
 <p id=output></p>
 <p id=demo>This should change to a date</p>
@@ -63,13 +37,25 @@ function buttonClick2(){
 <button type="button" onclick=buttonClick2()>Click to display</button>
 
 <p>Your answer is</p>
-<p id=stuff></p>
-
-<img id=img1 src=https://static.chope.co/uploads/2020/08/1596442710_61170.jpg>
+<p id=stuff ></p>
 <br>
-<button type="button" onclick=unhide()>Show image</button>
+<input id="text1" placeholder="Enter text"></input>
+<br>
+<button id="buttontext">Click me</button>
+<br>
+<br>
+-->
+
+<p id="stext" hidden>sssSSSssSSss </p>
+
+<img id=img1 hidden src=https://media-exp1.licdn.com/dms/image/C5603AQF86eC1VsdP0Q/profile-displayphoto-shrink_800_800/0?e=1605744000&v=beta&t=DFW4wrpcsaLPGCkEQ2XWSm5KK3BoWgpgZOBuJtot7Ro>
+<br>
+<button type="button" onclick=unhide()>Show me the snake!</button>
+
 <button type="button" onclick=hide()>Hide image</button>
 </div>
+
+
 
 </body>
 </html>
