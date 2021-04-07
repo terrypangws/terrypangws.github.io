@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        body {
+          max-width: 100%;
+          max-height: 100%;
+          
+        }
+        .content {
+                max-width:500px;
+                margin:auto;
+        }
+        
+        #img1{
+            max-width:100%
+        }
+        
+        </style>
+    <script>
+
+        function bmrCalc(){
+            var weight=document.getElementById("weight").value
+            var height=document.getElementById("height").value
+            var age=document.getElementById("age").value
+
+            var result= (10*weight)+(6.25*height)-(5*age)+5
+
+            var bmi=weight/((height*0.01)*(height*0.01))
+
+
+            document.getElementById("result").innerHTML=result
+            document.getElementById("bmi").innerHTML=bmi
+        }
+
+    </script>
+
 </head>
 <body>
+    <h1>Metabolism calculator</h1>
 
-    <p>This is a new page</p>
-    
+
+    <p>Calculate your BMR</p>
+    <p>Enter your weight (in kgs):
+    <input id="weight"> <br></p>
+    <p>Enter your height (in cm):
+    <input id="height"></p>
+    <p>Enter your age:
+    <input id="age">
+    </p>
+
+    <button onclick=bmrCalc() id="calcBMRButton">Calculate BMR</button>
+    <p> Your BMR is:</p>
+    <p id="result"></p>
+    <p>Your BMI is:</p>
+    <p id="bmi"></p>
+    <p id="calorieTotal"></p>
+
+
+
 </body>
 </html>
